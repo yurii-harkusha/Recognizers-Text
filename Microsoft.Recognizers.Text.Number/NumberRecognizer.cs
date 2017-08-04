@@ -5,6 +5,7 @@ using Microsoft.Recognizers.Text.Number.English;
 using Microsoft.Recognizers.Text.Number.French;
 using Microsoft.Recognizers.Text.Number.Portuguese;
 using Microsoft.Recognizers.Text.Number.Spanish;
+using Microsoft.Recognizers.Text.Number.Ukrainian;
 
 namespace Microsoft.Recognizers.Text.Number
 {
@@ -83,7 +84,21 @@ namespace Microsoft.Recognizers.Text.Number
                             AgnosticNumberParserFactory.GetParser(AgnosticNumberParserType.Percentage, new FrenchNumberParserConfiguration()),
                             new French.PercentageExtractor())
                     }
-                }
+                },
+             {
+                 Culture.Ukrainian, new Dictionary<Type, IModel>
+                 {
+                     [typeof (NumberModel)] = new NumberModel(
+                         AgnosticNumberParserFactory.GetParser(AgnosticNumberParserType.Number, new UkrainianNumberParserConfiguration()),
+                         new Ukrainian.NumberExtractor(NumberMode.PureNumber)),
+                     [typeof (OrdinalModel)] = new OrdinalModel(
+                         AgnosticNumberParserFactory.GetParser(AgnosticNumberParserType.Ordinal, new UkrainianNumberParserConfiguration()),
+                         new Ukrainian.OrdinalExtractor()),
+                     [typeof (PercentModel)] = new PercentModel(
+                         AgnosticNumberParserFactory.GetParser(AgnosticNumberParserType.Percentage, new UkrainianNumberParserConfiguration()),
+                         new Ukrainian.PercentageExtractor())
+                 }
+             },
             };
         }
 

@@ -103,6 +103,7 @@
     <Compile Include="Spanish\TestTimeParser.cs" />
     <Compile Include="Spanish\TestTimePeriodExtractor.cs" />
     <Compile Include="Spanish\TestTimePeriodParser.cs" />
+    <Compile Include="Ukrainian\TestDateExtractor.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Microsoft.Recognizers.Text.DateTime\Microsoft.Recognizers.Text.DateTime.csproj">

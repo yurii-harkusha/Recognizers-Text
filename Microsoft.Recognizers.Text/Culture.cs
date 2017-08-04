@@ -9,6 +9,7 @@ namespace Microsoft.Recognizers.Text
         public const string Spanish = "es-es";
         public const string Portuguese = "pt-br";
         public const string French = "fr-fr";
+        public const string Ukrainian = "ua-ua";
 
         public string CultureName;
         public string CultureCode;
@@ -18,7 +19,8 @@ namespace Microsoft.Recognizers.Text
             new Culture("Chinese", Chinese),
             new Culture("Spanish", Spanish),
             new Culture("Portuguese", Portuguese),
-            new Culture("French", French)
+            new Culture("French", French),
+            new Culture("Ukrainian", Ukrainian)
         };
 
         private Culture(string cultureName, string cultureCode)

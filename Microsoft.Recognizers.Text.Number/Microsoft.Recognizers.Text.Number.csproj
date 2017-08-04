@@ -106,6 +106,14 @@
     <Compile Include="Spanish\Extractors\OrdinalExtractor.cs" />
     <Compile Include="Spanish\Extractors\PercentageExtractor.cs" />
     <Compile Include="Spanish\Parsers\SpanishNumberParserConfiguration.cs" />
+    <Compile Include="Ukrainian\Extractors\CardinalExtractor.cs" />
+    <Compile Include="Ukrainian\Extractors\DoubleExtractor.cs" />
+    <Compile Include="Ukrainian\Extractors\FractionExtractor.cs" />
+    <Compile Include="Ukrainian\Extractors\IntegerExtractor.cs" />
+    <Compile Include="Ukrainian\Extractors\NumberExtractor.cs" />
+    <Compile Include="Ukrainian\Extractors\OrdinalExtractor.cs" />
+    <Compile Include="Ukrainian\Extractors\PercentageExtractor.cs" />
+    <Compile Include="Ukrainian\Parsers\UkrainianNumberParserConfiguration.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="CreatePackage.cmd" />
@@ -120,6 +128,7 @@
       <Name>Microsoft.Recognizers.Text</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
